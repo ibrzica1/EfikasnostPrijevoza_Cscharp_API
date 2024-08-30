@@ -1,3 +1,6 @@
+using EfikasnostPrijevoza_C__API.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,13 +10,23 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<EfikasnostContext>(
+    opcije =>
+    {
+        opcije.UseSqlServer(builder.Configuration.GetConnectionString("EfikasnostContext"));
+    }
+    ); 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(opcije =>
+    {
+        opcije.ConfigObject.AdditionalItems.Add("requestSnippetsEnabled", true);
+    });
 }
 
 app.UseHttpsRedirection();
