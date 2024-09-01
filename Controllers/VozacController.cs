@@ -44,7 +44,7 @@ namespace EfikasnostPrijevoza_C__API.Controllers
 
             vozacIzBaze.ime = vozac.ime;
             vozacIzBaze.prezime = vozac.prezime;
-            vozacIzBaze.godina_rodenja = vozac.godina_rodenja;
+            vozacIzBaze.datum_rodenja = vozac.datum_rodenja;
             vozacIzBaze.istek_ugovora = vozac.istek_ugovora;
 
             _context.Vozaci.Update(vozacIzBaze);
