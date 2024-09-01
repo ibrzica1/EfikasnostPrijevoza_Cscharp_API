@@ -48,6 +48,7 @@ namespace EfikasnostPrijevoza_C__API.Controllers
             kamionIzBaze.marka = kamion.marka;
             kamionIzBaze.godina_proizvodnje = kamion.godina_proizvodnje;
             kamionIzBaze.prosjecna_potrosnja_goriva = kamion.prosjecna_potrosnja_goriva;
+            kamionIzBaze.istek_registracije = kamion.istek_registracije;
 
             _context.Kamioni.Update(kamionIzBaze);
             _context.SaveChanges();
