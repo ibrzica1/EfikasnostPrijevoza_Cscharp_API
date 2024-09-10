@@ -2,10 +2,11 @@
 {
     public class Ciklicna
     {
-        public List<int> Lista { get; set; }
-        /* public bool Gore { get; set; }
-        public bool Dolje { get; set; }
-        public bool Desno { get; set; }
-        public bool Lijevo { get; set; } */
+        public int? Broj { get; set; }
+        public bool? Gore { get; set; }
+        public bool? Dolje { get; set; }
+        public bool? Desno { get; set; }
+        public bool? Lijevo { get; set; }
+        public string? Boja { get; set; }
     }
 }
