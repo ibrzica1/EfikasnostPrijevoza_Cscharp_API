@@ -2,6 +2,8 @@
 using EfikasnostPrijevoza_C__API.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Bogus.DataSets;
+
 
 namespace EfikasnostPrijevoza_C__API.Controllers
 {
