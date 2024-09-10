@@ -10,7 +10,6 @@ namespace EfikasnostPrijevoza_C__API.Controllers
     [Route("api/v1/[controller]")]
     public class LjubavniController:ControllerBase
     {
-        public Ljubavna Ljubavni { get; set; }
         Ljubavna Ljubavna = new Ljubavna();
 
         [HttpGet]
