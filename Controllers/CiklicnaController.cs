@@ -97,7 +97,7 @@ namespace EfikasnostPrijevoza_C__API.Controllers
                         ciklicna.Broj = broj;
                         if (i == minStupac) { ciklicna.Gore = true; } else { ciklicna.Gore = false; }
                         ciklicna.Dolje = false;
-                        if (i == minStupac) { ciklicna.Lijevo = false; } else { ciklicna.Lijevo = true; }
+                        if (i == minStupac || ciklicna.Boja == "siva") { ciklicna.Lijevo = false; } else { ciklicna.Lijevo = true; }
                         if (i == maxStupac) { ciklicna.Desno = false; } else { ciklicna.Desno = true; }
                     }
                     lista.Add(ciklicna);
