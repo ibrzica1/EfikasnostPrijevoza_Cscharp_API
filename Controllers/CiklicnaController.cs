@@ -164,8 +164,9 @@ namespace EfikasnostPrijevoza_C__API.Controllers
                 }
                 maxStupac--;
             }
+            Ciklicna[] niz = lista.ToArray();
 
-            return Ok(lista);
+            return Ok(niz);
 
         }
     }
