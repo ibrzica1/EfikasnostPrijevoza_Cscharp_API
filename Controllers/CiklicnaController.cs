@@ -164,9 +164,15 @@ namespace EfikasnostPrijevoza_C__API.Controllers
                 }
                 maxStupac--;
             }
-            Ciklicna[] niz = lista.ToArray();
+            Ciklicna[] niz = new Ciklicna[redovi];
 
-            return Ok(niz);
+            foreach (var item in lista)
+            {
+                niz.Append(item);
+            }
+
+
+            return Ok(JsonConvert.SerializeObject(lista));
 
         }
     }
