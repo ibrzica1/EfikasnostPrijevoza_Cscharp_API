@@ -3,56 +3,115 @@ using EfikasnostPrijevoza_C__API.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Bogus.DataSets;
+using AutoMapper;
+using EfikasnostPrijevoza_C__API.Models.DTO;
 
 
 namespace EfikasnostPrijevoza_C__API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class VozacController:ControllerBase
+    public class VozacController(EfikasnostContext context, IMapper mapper):EfikasnostController(context, mapper)
     {
-        private readonly EfikasnostContext _context;
-        public VozacController(EfikasnostContext context)
-        {
-            _context = context;
-        }
+       
 
         [HttpGet]
-        public IActionResult Get()
+        public ActionResult<List<VozacDTORead>> Get()
         {
-            return Ok(_context.Vozaci);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { poruka = ModelState });
+            }
+            try
+            {
+                return Ok(_mapper.Map<List<VozacDTORead>>(_context.Vozaci));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { poruka = ex.Message });
+            }
         }
 
         [HttpGet]
         [Route("{vozac_id:int}")]
-        public IActionResult GetById(int vozac_id)
+        public ActionResult<KamionDTORead> GetById(int vozac_id)
         {
-            return Ok(_context.Vozaci.Find(vozac_id));
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { poruka = ModelState });
+            }
+            Vozaci? e;
+            try
+            {
+                e = _context.Vozaci.Find(vozac_id);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { poruka = ex.Message });
+            }
+            if (e == null)
+            {
+                return NotFound(new { poruka = "Vozač ne postoji u bazi" });
+            }
+
+            return Ok(_mapper.Map<VozacDTORead>(e));
         }
 
         [HttpPost]
-        public IActionResult Post(Vozaci vozac)
+        public IActionResult Post(VozacDTOInsertUpdate vozacDTO)
         {
-            _context.Vozaci.Add(vozac);
-            _context.SaveChanges();
-            return StatusCode(StatusCodes.Status201Created, vozac);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { poruka = ModelState });
+            }
+            try
+            {
+                var e = _mapper.Map<Vozaci>(vozacDTO);
+                _context.Vozaci.Add(e);
+                _context.SaveChanges();
+                return StatusCode(StatusCodes.Status201Created, _mapper.Map<VozacDTORead>(e));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { poruka = ex.Message });
+            }
         }
         [HttpPut]
         [Route("{vozac_id:int}")]
         [Produces("application/json")]
-        public IActionResult Put(int vozac_id, Vozaci vozac)
+        public IActionResult Put(int vozac_id, VozacDTOInsertUpdate vozacDTO)
         {
-            var vozacIzBaze = _context.Vozaci.Find(vozac_id);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { poruka = ModelState });
+            }
+            try
+            {
+                Vozaci? e;
+                try
+                {
+                    e = _context.Vozaci.Find(vozac_id);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(new { poruka = ex.Message });
+                }
+                if (e == null)
+                {
+                    return NotFound(new { poruka = "Vozač ne postoji u bazi" });
+                }
 
-            vozacIzBaze.ime = vozac.ime;
-            vozacIzBaze.prezime = vozac.prezime;
-            vozacIzBaze.datum_rodenja = vozac.datum_rodenja;
-            vozacIzBaze.istek_ugovora = vozac.istek_ugovora;
+                e = _mapper.Map(vozacDTO, e);
 
-            _context.Vozaci.Update(vozacIzBaze);
-            _context.SaveChanges();
+                _context.Vozaci.Update(e);
+                _context.SaveChanges();
 
-            return Ok(new { poruka = "Uspješno promjenjeno" });
+                return Ok(new { poruka = "Uspješno promjenjeno" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { poruka = ex.Message });
+            }
 
         }
 
@@ -62,10 +121,33 @@ namespace EfikasnostPrijevoza_C__API.Controllers
 
         public IActionResult Delete(int vozac_id)
         {
-            var vozacIzBaze = _context.Vozaci.Find(vozac_id);
-            _context.Vozaci.Remove(vozacIzBaze);
-            _context.SaveChanges();
-            return Ok(new { poruka = "Uspješno obrisano" });
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { poruka = ModelState });
+            }
+            try
+            {
+                Vozaci? e;
+                try
+                {
+                    e = _context.Vozaci.Find(vozac_id);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(new { poruka = ex.Message });
+                }
+                if (e == null)
+                {
+                    return NotFound("Vozač ne postoji u bazi");
+                }
+                _context.Vozaci.Remove(e);
+                _context.SaveChanges();
+                return Ok(new { poruka = "Uspješno obrisano" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { poruka = ex.Message });
+            }
         }
     }
 }

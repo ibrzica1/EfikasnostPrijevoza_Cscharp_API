@@ -1,5 +1,7 @@
 using EfikasnostPrijevoza_C__API.Data;
 using Microsoft.EntityFrameworkCore;
+using EfikasnostPrijevoza_C__API.Mapping;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,8 @@ builder.Services.AddCors(opcije =>
     );
 
 });
+
+builder.Services.AddAutoMapper(typeof(EfikasnostMappingProfile));
 
 var app = builder.Build();
 
