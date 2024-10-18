@@ -6,6 +6,7 @@
         string ime,
         string prezime,
         DateTime? datum_rodenja,
-        DateTime? istek_ugovora
+        DateTime? istek_ugovora,
+        string? Slika
         );
 }

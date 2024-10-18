@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Bogus.DataSets;
 using AutoMapper;
 using EfikasnostPrijevoza_C__API.Models.DTO;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace EfikasnostPrijevoza_C__API.Controllers
@@ -147,6 +148,69 @@ namespace EfikasnostPrijevoza_C__API.Controllers
             catch (Exception ex)
             {
                 return BadRequest(new { poruka = ex.Message });
+            }
+        }
+
+        [HttpGet]
+        [Route("traziStranicenje/{stranica}")]
+        public IActionResult TraziVozacStranicenje(int stranica, string uvjet = "")
+        {
+            var poStranici = 4;
+            uvjet = uvjet.ToLower();
+            try
+            {
+                var vozaci = _context.Vozaci
+                    .Where(p => EF.Functions.Like(p.ime.ToLower(), "%" + uvjet + "%")
+                                || EF.Functions.Like(p.prezime.ToLower(), "%" + uvjet + "%"))
+                    .Skip((poStranici * stranica) - poStranici)
+                    .Take(poStranici)
+                    .OrderBy(p => p.prezime)
+                    .ToList();
+
+
+                return Ok(_mapper.Map<List<VozacDTORead>>(vozaci));
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPut]
+        [Route("postaviSliku/{vozac_id:int}")]
+        public IActionResult PostaviSliku(int vozac_id, SlikaDTO slika)
+        {
+            if (vozac_id <= 0)
+            {
+                return BadRequest("Šifra mora biti veća od nula (0)");
+            }
+            if (slika.Base64 == null || slika.Base64?.Length == 0)
+            {
+                return BadRequest("Slika nije postavljena");
+            }
+            var p = _context.Vozaci.Find(vozac_id);
+            if (p == null)
+            {
+                return BadRequest("Ne postoji vozač s šifrom " + vozac_id + ".");
+            }
+            try
+            {
+                var ds = Path.DirectorySeparatorChar;
+                string dir = Path.Combine(Directory.GetCurrentDirectory()
+                    + ds + "wwwroot" + ds + "slike" + ds + "vozaci");
+
+                if (!System.IO.Directory.Exists(dir))
+                {
+                    System.IO.Directory.CreateDirectory(dir);
+                }
+                var putanja = Path.Combine(dir + ds + vozac_id + ".png");
+                System.IO.File.WriteAllBytes(putanja, Convert.FromBase64String(slika.Base64!));
+                return Ok("Uspješno pohranjena slika");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
             }
         }
     }
