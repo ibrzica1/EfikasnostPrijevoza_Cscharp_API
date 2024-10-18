@@ -65,7 +65,7 @@ async function getStranicenje(stranica,uvjet){
   }
 
   async function postaviSliku(vozac_id, slika) {
-    return await HttpService.put('/Polaznik/postaviSliku/' + vozac_id, slika)
+    return await HttpService.put('/vozac/postaviSliku/' + vozac_id, slika)
     .then((odgovor)=>{return  {greska: false, poruka: odgovor.data};})
     .catch((e)=>{ return {greska: true, poruka: 'Problem kod postavljanja slike vozača '}});
   }

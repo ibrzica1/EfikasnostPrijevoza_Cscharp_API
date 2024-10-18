@@ -8,39 +8,45 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
     <_PublishTargetUrl>ftp://win6218.site4now.net:21/site1</_PublishTargetUrl>
-    <History>False|2024-09-14T19:48:08.4459358Z||;False|2024-09-14T19:44:56.8399178+02:00||;True|2024-09-12T16:20:53.8394958+02:00||;True|2024-09-10T17:09:27.2706594+02:00||;False|2024-09-10T17:05:15.2447654+02:00||;False|2024-09-10T17:04:35.8044092+02:00||;</History>
+    <History>False|2024-10-18T16:45:20.6588008Z;False|2024-09-14T21:48:08.4459358+02:00;False|2024-09-14T19:44:56.8399178+02:00;True|2024-09-12T16:20:53.8394958+02:00;True|2024-09-10T17:09:27.2706594+02:00;False|2024-09-10T17:05:15.2447654+02:00;False|2024-09-10T17:04:35.8044092+02:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
-      <publishTime>08/29/2024 19:44:12</publishTime>
+      <publishTime>09/03/2024 16:51:56</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>09/12/2024 16:12:53</publishTime>
+      <publishTime>09/12/2024 16:47:11</publishTime>
     </File>
     <File Include="Azure.Core.dll">
-      <publishTime>07/09/2023 19:50:30</publishTime>
+      <publishTime>09/07/2023 19:50:30</publishTime>
     </File>
     <File Include="Azure.Identity.dll">
       <publishTime>10/18/2023 21:59:42</publishTime>
     </File>
     <File Include="Bogus.dll">
-      <publishTime>03/09/2024 00:22:26</publishTime>
+      <publishTime>09/03/2024 00:22:26</publishTime>
     </File>
     <File Include="EfikasnostPrijevoza_C#_API.deps.json">
-      <publishTime>09/14/2024 21:47:32</publishTime>
+      <publishTime>10/18/2024 18:44:34</publishTime>
     </File>
     <File Include="EfikasnostPrijevoza_C#_API.dll">
-      <publishTime>09/12/2024 16:20:24</publishTime>
+      <publishTime>12/09/2024 16:20:24</publishTime>
     </File>
     <File Include="EfikasnostPrijevoza_C#_API.exe">
-      <publishTime>09/14/2024 21:47:32</publishTime>
+      <publishTime>10/18/2024 18:44:34</publishTime>
     </File>
     <File Include="EfikasnostPrijevoza_C#_API.pdb">
-      <publishTime>09/14/2024 21:47:32</publishTime>
+      <publishTime>10/18/2024 18:44:34</publishTime>
     </File>
     <File Include="EfikasnostPrijevoza_C#_API.runtimeconfig.json">
-      <publishTime>09/11/2024 21:21:58</publishTime>
+      <publishTime>10/18/2024 18:44:35</publishTime>
+    </File>
+    <File Include="Frontend/package-lock.json">
+      <publishTime>10/18/2024 17:41:20</publishTime>
+    </File>
+    <File Include="Frontend/package.json">
+      <publishTime>10/18/2024 17:40:40</publishTime>
     </File>
     <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
       <publishTime>04/15/2020 00:39:12</publishTime>
@@ -49,52 +55,52 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2024 03:49:44</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
-      <publishTime>07/17/2024 23:12:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.dll">
-      <publishTime>07/17/2024 23:12:52</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
-      <publishTime>07/17/2024 23:13:10</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
-      <publishTime>07/17/2024 23:13:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.Identity.Client.dll">
-      <publishTime>05/09/2023 20:25:28</publishTime>
+      <publishTime>09/05/2023 20:25:28</publishTime>
     </File>
     <File Include="Microsoft.Identity.Client.Extensions.Msal.dll">
-      <publishTime>05/09/2023 20:31:58</publishTime>
+      <publishTime>09/05/2023 20:31:58</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Abstractions.dll">
-      <publishTime>01/12/2023 05:56:56</publishTime>
+      <publishTime>12/01/2023 05:56:56</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
-      <publishTime>01/12/2023 05:34:00</publishTime>
+      <publishTime>12/01/2023 05:34:00</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Logging.dll">
-      <publishTime>01/12/2023 05:35:22</publishTime>
+      <publishTime>12/01/2023 05:35:22</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Protocols.dll">
-      <publishTime>01/12/2023 05:37:28</publishTime>
+      <publishTime>12/01/2023 05:37:28</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
-      <publishTime>01/12/2023 05:48:08</publishTime>
+      <publishTime>12/01/2023 05:48:08</publishTime>
     </File>
     <File Include="Microsoft.IdentityModel.Tokens.dll">
-      <publishTime>01/12/2023 05:41:50</publishTime>
+      <publishTime>12/01/2023 05:41:50</publishTime>
     </File>
     <File Include="Microsoft.OpenApi.dll">
-      <publishTime>08/29/2020 22:14:12</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.SqlServer.Server.dll">
-      <publishTime>01/27/2022 18:19:08</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.Win32.SystemEvents.dll">
       <publishTime>10/23/2021 01:40:24</publishTime>
     </File>
     <File Include="Newtonsoft.Json.dll">
-      <publishTime>08/03/2023 08:09:54</publishTime>
+      <publishTime>03/08/2023 08:09:54</publishTime>
     </File>
     <File Include="runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll">
       <publishTime>01/27/2024 03:49:42</publishTime>
@@ -103,16 +109,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/23/2021 01:51:42</publishTime>
     </File>
     <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
-      <publishTime>11/08/2023 20:56:28</publishTime>
+      <publishTime>08/11/2023 20:56:28</publishTime>
     </File>
     <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
-      <publishTime>11/08/2023 20:56:28</publishTime>
+      <publishTime>08/11/2023 20:56:28</publishTime>
     </File>
     <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll">
-      <publishTime>11/08/2023 20:56:18</publishTime>
+      <publishTime>08/11/2023 20:56:18</publishTime>
     </File>
     <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll">
-      <publishTime>11/08/2023 20:56:18</publishTime>
+      <publishTime>08/11/2023 20:56:18</publishTime>
     </File>
     <File Include="runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll">
       <publishTime>01/27/2024 03:49:42</publishTime>
@@ -133,25 +139,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/23/2021 01:49:58</publishTime>
     </File>
     <File Include="Swashbuckle.AspNetCore.Swagger.dll">
-      <publishTime>07/19/2022 17:21:22</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Swashbuckle.AspNetCore.SwaggerGen.dll">
-      <publishTime>07/19/2022 17:21:38</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Swashbuckle.AspNetCore.SwaggerUI.dll">
-      <publishTime>07/19/2022 17:21:48</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="System.Configuration.ConfigurationManager.dll">
-      <publishTime>08/19/2022 21:58:02</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="System.Drawing.Common.dll">
       <publishTime>10/23/2021 01:49:12</publishTime>
     </File>
     <File Include="System.IdentityModel.Tokens.Jwt.dll">
-      <publishTime>01/12/2023 05:31:48</publishTime>
+      <publishTime>12/01/2023 05:31:48</publishTime>
     </File>
     <File Include="System.Memory.Data.dll">
-      <publishTime>08/04/2021 18:45:54</publishTime>
+      <publishTime>04/08/2021 18:45:54</publishTime>
     </File>
     <File Include="System.Runtime.Caching.dll">
       <publishTime>10/23/2021 01:52:02</publishTime>
@@ -166,7 +172,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/23/2021 01:49:44</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>09/14/2024 21:47:46</publishTime>
+      <publishTime>10/18/2024 18:44:52</publishTime>
     </File>
     <File Include="wwwroot/assets/index-A5EIQdll.js">
       <publishTime>09/14/2024 21:38:18</publishTime>
@@ -174,11 +180,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="wwwroot/assets/index-C1AlnCFe.css">
       <publishTime>09/14/2024 21:38:18</publishTime>
     </File>
+    <File Include="wwwroot/assets/index-C59SV0Au.js">
+      <publishTime>10/18/2024 18:41:34</publishTime>
+    </File>
+    <File Include="wwwroot/assets/index-uq3hltTs.css">
+      <publishTime>10/18/2024 18:41:34</publishTime>
+    </File>
+    <File Include="wwwroot/assets/nepoznato-DUrd6BJR.jpg">
+      <publishTime>10/18/2024 18:41:34</publishTime>
+    </File>
     <File Include="wwwroot/index.html">
-      <publishTime>09/14/2024 21:38:18</publishTime>
+      <publishTime>10/18/2024 18:41:34</publishTime>
     </File>
     <File Include="wwwroot/vite.svg">
-      <publishTime>09/05/2024 10:21:59</publishTime>
+      <publishTime>10/18/2024 17:38:57</publishTime>
     </File>
   </ItemGroup>
 </Project>

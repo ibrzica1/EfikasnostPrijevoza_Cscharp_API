@@ -1,7 +1,7 @@
 import { HttpService } from "./HttpService";
 
 async function getCiklicnaData(a, b) {
-    return await HttpService.get(`/Metoda2`, { 
+    return await HttpService.get(`/Ciklicna/Metoda2`, { 
         params: { a: a, b: b } 
     })
     .then((response) => {

@@ -91,7 +91,7 @@ export default function TuraPromjena() {
       kamion_id: parseInt(kamion_id),
       vozac_id: parseInt(vozac_id),
       datum_pocetak: moment.utc(podaci.get('datum_pocetak')),
-      datum_zavsetak: moment.utc(podaci.get('datum_zavrsetak'))
+      datum_zavrsetak: moment.utc(podaci.get('datum_zavrsetak'))
     });
   }
 
@@ -151,12 +151,12 @@ export default function TuraPromjena() {
 
               <Form.Group controlId="datum_pocetak">
                   <Form.Label>Datum početak</Form.Label>
-                  <Form.Control type="date" name="datum_početak" required defaultValue={tura.datum_pocetak}/>
+                  <Form.Control type="date" name="datum_pocetak" required defaultValue={tura.datum_pocetak}/>
               </Form.Group>
 
-              <Form.Group controlId="datum_zavsetak">
-                  <Form.Label>Datum zavšetak</Form.Label>
-                  <Form.Control type="date" name="datum_zavsetak" defaultValue={tura.datum_zavsetak}/>
+              <Form.Group controlId="datum_zavrsetak">
+                  <Form.Label>Datum završetak</Form.Label>
+                  <Form.Control type="date" name="datum_zavrsetak" defaultValue={tura.datum_zavrsetak}/>
               </Form.Group>
 
 

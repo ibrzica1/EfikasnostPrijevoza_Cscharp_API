@@ -195,7 +195,7 @@ export default function VozaciPregled() {
         
           <Row>
               <Col>
-              <Link className="btn btn-primary gumb" to={`/vozac/${p.vozac_id}`}><FaEdit /></Link>
+              <Link className="btn btn-primary gumb" to={`/Vozaci/${p.vozac_id}`}><FaEdit /></Link>
               </Col>
               <Col>
               <Button variant="danger" className="gumb"  onClick={() => obrisi(p.vozac_id)}><FaTrash /></Button>

@@ -75,7 +75,7 @@ export default function TureDodaj() {
       kamion_id: parseInt(kamion_id),
       vozac_id: parseInt(vozac_id),
       datum_pocetak: moment.utc(podaci.get('datum_pocetak')),
-      datum_zavsetak: moment.utc(podaci.get('datum_zavrsetak'))
+      datum_zavrsetak: moment.utc(podaci.get('datum_zavrsetak'))
 
     });
   } 
@@ -134,7 +134,7 @@ export default function TureDodaj() {
 
 
           <Form.Group controlId="datum_zavrsetak">
-              <Form.Label>Datum zavšetak</Form.Label>
+              <Form.Label>Datum završetak</Form.Label>
               <Form.Control type="date" name="datum_zavrsetak" required />
           </Form.Group>
 
