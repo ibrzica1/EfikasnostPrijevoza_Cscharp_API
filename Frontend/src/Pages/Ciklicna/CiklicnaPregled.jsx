@@ -36,7 +36,7 @@ export default function CiklicnaPregled() {
 
     return (
         <Container>
-            <h2>Ciklicna Tablica</h2>
+            <h2>Ciklična Tablica</h2>
             
             <Form onSubmit={handleSubmit} className="mb-3">
                 <Form.Group className="mb-2">
@@ -77,12 +77,12 @@ export default function CiklicnaPregled() {
                     <tbody>
                         {ciklicnaData.map((item, index) => (
                             <tr key={index}>
-                                <td>{item.broj}</td>
-                                <td>{item.boja}</td>
-                                <td>{item.gore ? "True" : "False"}</td>
-                                <td>{item.dolje ? "True" : "False"}</td>
-                                <td>{item.lijevo ? "True" : "False"}</td>
-                                <td>{item.desno ? "True" : "False"}</td>
+                                <td>{item.Broj}</td>
+                                <td>{item.Boja}</td>
+                                <td>{item.Gore ? "True" : "False"}</td>
+                                <td>{item.Dolje ? "True" : "False"}</td>
+                                <td>{item.Lijevo ? "True" : "False"}</td>
+                                <td>{item.Desno ? "True" : "False"}</td>
                             </tr>
                         ))}
                     </tbody>

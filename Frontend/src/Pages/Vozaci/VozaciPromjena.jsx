@@ -110,6 +110,7 @@ export default function VozaciPromjena() {
       }    
     return (
         <>
+        <Container>
             Promjena vozaca
             <Row>
             <Col key='1' sm={12} lg={6} md={6}>
@@ -201,6 +202,7 @@ export default function VozaciPromjena() {
               />
         </Col>
       </Row>
+      </Container>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import { Form, Row, Col, Table, Button } from 'react-bootstrap';
+import { Form, Row, Col, Table, Button, Container } from 'react-bootstrap';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { RoutesNames } from '../../constans';
@@ -97,6 +97,7 @@ export default function TuraPromjena() {
 
   return (
       <>
+      <Container>
       Mjenjanje podataka ture
       <Row>
         <Col key='1' sm={12} lg={6} md={6}>
@@ -177,6 +178,7 @@ export default function TuraPromjena() {
           </Form>
         </Col>
         </Row>
+        </Container>
         </>
   );
 }

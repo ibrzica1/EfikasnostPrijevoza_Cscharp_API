@@ -149,6 +149,7 @@ export default function VozaciPregled() {
 
         return(
             <>
+            <Container>
         <Row>
         <Col key={1} sm={12} lg={4} md={4}>
             <Form.Control
@@ -219,6 +220,7 @@ export default function VozaciPregled() {
             </Pagination>
         </div>
         )}
+        </Container>
 </>
 )
 }
