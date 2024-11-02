@@ -20,7 +20,7 @@ export default function NavBarEfikasnost() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link onClick={() => navigate(RoutesNames.HOME)}>Početna</Nav.Link>
-              <Nav.Link href="https://efikasnostprijevoza.site/swagger/index.html" target='_blank'>Swagger</Nav.Link>
+              <Nav.Link href="https://brzica-001-site1.dtempurl.com/swagger/index.html" target='_blank'>Swagger</Nav.Link>
               <NavDropdown title="Programi" id="basic-nav-dropdown">
                 <NavDropdown.Item onClick={() => navigate(RoutesNames.VOZAC_PREGLED)}>Vozači</NavDropdown.Item>
                 <NavDropdown.Item onClick={() => navigate(RoutesNames.KAMION_PREGLED)}>Kamioni</NavDropdown.Item>
